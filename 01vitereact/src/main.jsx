@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 
 function MyApp() {
   return (
     <div>
-      <h1>Custom App | Chai or Coffee ??</h1>
+      <h1> Custom App | Chai or Coffee ?? </h1>
     </div>
   )
 }
