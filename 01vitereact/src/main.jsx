@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 // import App from './App.jsx'
 
 function MyApp() {
@@ -7,7 +7,7 @@ function MyApp() {
     <div>
       <h1> Custom App | Chai or Coffee ?? </h1>
     </div>
-  )
+  );
 }
 
 // const reactElement = {
@@ -20,22 +20,24 @@ function MyApp() {
 // }
 
 const anotherElement = (
-  <a href="https://google.com" target='_blank'> Visit Google </a>
-)
+  <a href="https://google.com" target="_blank">
+    {" "}
+    Visit Google{" "}
+  </a>
+);
 
-const anotherUser = "Chai aur code"
+const anotherUser = "Chai aur code";
 
-const reactElement =  React.createElement(
-  'a',
-  {href: 'https://google.com', target: '_blank'},
-  'Click ME to Visit Google | ',
+const reactElement = React.createElement(
+  "a",
+  { href: "https://google.com", target: "_blank" },
+  "Click ME to Visit Google | ",
   anotherUser
-)
+);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   // <App/>
   // reactElement
   // anotherElement
   reactElement
-)
- 
+);
