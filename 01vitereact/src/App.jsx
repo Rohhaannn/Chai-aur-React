@@ -1,8 +1,8 @@
 
-import Chai from "./chai"
+import Chai from "/Chai"
 
 function App() {
-  const username = "Chai Aur Code"
+  const username = "Rohan with Chai Aur Code"
  
   return (
     <>

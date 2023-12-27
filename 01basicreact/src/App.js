@@ -3,7 +3,8 @@ import Chai from "./Chai";
 function App() {
   return (
    <>
-     <Chai/>
+      <h1> Basic React App </h1>
+      <Chai/>
    </> 
    
   );
