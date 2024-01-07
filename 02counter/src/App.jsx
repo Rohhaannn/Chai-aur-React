@@ -16,6 +16,11 @@ function App() {
     // counter = counter + 1;
     
     setCounter(counter + 1);
+    setCounter((pervcounter) => pervcounter + 1 );
+    setCounter((pervcounter) => pervcounter + 1 );
+    setCounter((pervcounter) => pervcounter + 1 );
+    setCounter((pervcounter) => pervcounter + 1 );
+
   }
 
   const removeValue = ()=> {
