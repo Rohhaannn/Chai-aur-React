@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
@@ -6,6 +6,9 @@ function App() {
   const [numAllowed, setNumAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState();
+
+  //useRef hook
+  const passwordRef = useRef(null)
 
   // password generator
   const passwordGenerator = useCallback(() => {
@@ -16,7 +19,7 @@ function App() {
     if (numAllowed) str += "0123456789";
 
     //if char allowed
-    if (numAllowed) str += "!@#$%^&*-()_+=[]{}~`";
+    if (charAllowed) str += "!@#$%^&*-()_+=[]{}~`";
 
     // now if I want to extract the values from these above variables I will run a loop. Loop will run to value of length.
     for (let i=0; i <=length; i++) {
@@ -31,6 +34,18 @@ function App() {
     passwordGenerator()
   }, [length, numAllowed, charAllowed, passwordGenerator])
 
+
+  // const copyToClipboard = () => {
+  //   navigator.clipboard.writeText(password);;
+  //   document.getSelection().removeAllRanges();
+  // }
+
+  const copyToClipboard = useCallback (() => {
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0, 100);
+    window.navigator.clipboard.writeText(password)
+  }, [password])
+
   return (
     <>
 
@@ -38,8 +53,17 @@ function App() {
         <h1 className='text-4xl text-center my-4'> Password Generator </h1>
 
         <div className='shadow rounded-lg overflow-hidden mb-4'> 
-          <input type="text" value={password} className='outline-none bg-white w-full rounded-lg py-1 px-4 my-5 ' placeholder='Password'/>
-          <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'> Copy </button>
+          <input 
+            type="text" 
+            value={password} 
+            className='outline-none bg-white w-full rounded-lg py-1 px-4 my-5 ' placeholder='Password'
+            ref={passwordRef}
+          />
+
+          <button 
+            onClick={copyToClipboard} 
+            className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'> Copy 
+          </button>
         </div>
 
         <div className='flex text-sm gap-x-2'>
