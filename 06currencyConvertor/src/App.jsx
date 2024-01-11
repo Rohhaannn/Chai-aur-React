@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <div
-            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat text-black"
             style={{
                 backgroundImage: `url('https://images.pexels.com/photos/1076885/pexels-photo-1076885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
             }}
