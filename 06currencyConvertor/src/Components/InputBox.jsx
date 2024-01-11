@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useId} from 'react'
 
 
-export default function InputBox({
+function InputBox({
   label,
   amount,
   onAmountChange,
@@ -56,6 +56,6 @@ export default function InputBox({
   );
 }
 
-// export default InputBox;
+export default InputBox;
 
 

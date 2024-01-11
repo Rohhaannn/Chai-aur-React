@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import './App.css'
-import {InputBox} from "./Components";
+import {InputBox} from './components';
 import useCurrencyInfo from './hooks/useCurrencyInfo';
 import { useState } from 'react';
 
@@ -14,12 +14,20 @@ function App() {
 
   const options = currencyInfo ? Object.keys(currencyInfo) : [];
 
+  // const swap = () => {
+  //   setFrom(setTo)
+  //   setTo(setFrom)
+  //   setConvertedAmount(amount)
+  //   setAmount(convertedAmount)
+  // }
+
   const swap = () => {
-    setFrom(setTo)
-    setTo(setFrom)
-    setConvertedAmount(amount)
-    setAmount(convertedAmount)
-  }
+    setFrom(to);
+    setTo(from);
+    setConvertedAmount(amount);
+    setAmount(convertedAmount);
+  };
+  
 
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to])
@@ -47,7 +55,8 @@ function App() {
                                 label="From"
                                 amount={amount}
                                 currencyOptions={options}
-                                onCurrencyChnage={(currency) => setAmount(amount)}
+                                // onCurrencyChnage={(currency) => setAmount(amount)}
+                                onCurrencyChange={(currency) => setFrom(currency)}
                                 selectCurrency={from}
                                 onAmountChange={(amount) => setAmount(amount)}
                             />
@@ -68,8 +77,9 @@ function App() {
                                 label="To"
                                 amount={convertedAmount}
                                 currencyOptions={options}
-                                onCurrencyChnage={(currency) => setTo(currency)}
-                                selectCurrency={from}
+                                // onCurrencyChnage={(currency) => setTo(currency)}
+                                onCurrencyChange={(currency) => setFrom(currency)}
+                                selectCurrency={to}
                                 amountDisable 
                             />
                         </div>

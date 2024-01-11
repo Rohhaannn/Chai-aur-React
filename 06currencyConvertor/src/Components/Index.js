@@ -1,3 +1,6 @@
-import InputBox from "./InputBox";
+// import InputBox from "./InputBox.jsx"
 
-export default {InputBox}
+import InputBox from "./InputBox"
+
+
+export {InputBox}
