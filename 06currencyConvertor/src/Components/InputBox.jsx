@@ -1,6 +1,5 @@
 import React, {useId} from 'react'
 
-
 function InputBox({
   label,
   amount,
