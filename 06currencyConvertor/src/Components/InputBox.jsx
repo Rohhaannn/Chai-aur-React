@@ -14,6 +14,11 @@ function InputBox({
 }) {
 
   const amountInputId = useId()
+
+  const handleChange = (e) => {
+    console.log(e.target.value)
+    onCurrencyChnage && onCurrencyChnage(e.target.value)
+  }
  
   return (
       <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
@@ -42,7 +47,8 @@ function InputBox({
               <select
                 className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                 value={selectCurrency}
-                onChange={(e) => onCurrencyChnage && onCurrencyChnage(e.target.value)}
+                // onChange={(e) => onCurrencyChnage && onCurrencyChnage(e.target.value)}
+                onChange = {handleChange}
                 disabled={currencyDisable}>
 
                     {currencyOptions.map((currency) => (
