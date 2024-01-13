@@ -19,7 +19,8 @@ function Github() {
   const data = useLoaderData()
   
   return (
-    <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
+    <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl '>
+      Github Name : {data.name} &nbsp;&nbsp;
       Github Followers : {data.followers}
       <img src={data.avatar_url} alt="Git Profile Pic" width={280}/>
     </div>
