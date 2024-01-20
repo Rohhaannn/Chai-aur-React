@@ -45,32 +45,30 @@ function App() {
   // so when our page gets loaded for the first time we need a function that takes those values (todos) from localStorage and display us
   // thats why we are using useEffect hook here.
   
-  // useEffect(() => {
-  //   //localStorage.getItem("todos") // this will give us String values
+  useEffect(() => {
+    //localStorage.getItem("todos") // this will give us String values
   
-  //   const todos = JSON.parse(localStorage.getItem("todos")) // but this JSON.parse() will give us direct JavaScript
+    const todos = JSON.parse(localStorage.getItem("todos")) // but this JSON.parse() will give us direct JavaScript
     
-  //   if(todos && todos.length > 0) {
-  //     setTodos(todos)
-  //   }
-  // }, [])
+    if(todos && todos.length > 0) {
+      setTodos(todos)
+    }
+  }, [])
 
 
   //from Bard
-  useEffect(() => {
-    const storedTodos = localStorage.getItem("todos");
-  
-    try {
-      const todos = storedTodos ? JSON.parse(storedTodos) : []; // Parse only if data exists
-  
-      if (todos.length > 0) {
-        setTodos(todos);
-      }
-    } catch (error) {
-      console.error("Error parsing todos from localStorage:", error);
-      // Handle the error gracefully, e.g., setTodos([]) to clear the state
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedTodos = localStorage.getItem("todos");
+  //   try {
+  //     const todos = storedTodos ? JSON.parse(storedTodos) : []; // Parse only if data exists
+  //     if (todos.length > 0) {
+  //       setTodos(todos);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error parsing todos from localStorage:", error);
+  //     // Handle the error gracefully, e.g., setTodos([]) to clear the state
+  //   }
+  // }, []);
 
   //from chatGPT
   // useEffect(() => {
