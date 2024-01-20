@@ -56,7 +56,7 @@ function App() {
   }, [])
 
 
-  //from Bard
+    //from Bard
   // useEffect(() => {
   //   const storedTodos = localStorage.getItem("todos");
   //   try {
@@ -84,7 +84,6 @@ function App() {
   // }, []);
   
   
-
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos))
   },[todos])
