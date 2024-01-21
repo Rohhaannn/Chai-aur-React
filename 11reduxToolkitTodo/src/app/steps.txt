@@ -3,5 +3,5 @@ import { configureStore } from '@reduxjs/toolkit'
 
 video till 18:00 watched 
 
-
+installation till this point
 (npm install & redux & redux-toolkit installed)
