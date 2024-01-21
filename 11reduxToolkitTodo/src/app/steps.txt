@@ -1,0 +1,4 @@
+1. configure store using resux toolkit 
+import { configureStore } from '@reduxjs/toolkit'
+
+video till 18:00 watched
