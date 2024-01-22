@@ -1,7 +1,11 @@
 1. configure store using resux toolkit 
 import { configureStore } from '@reduxjs/toolkit'
 
-video till 18:00 watched 
+then we'll assign configureStore to a variable which we are gonna export
+this configureStore store will take an object but it is still not ready to use
 
-installation till this point
-(npm install & redux & redux-toolkit installed)
+
+after this we'llc create reducers
+-in this we'll import createSlice & nanoid(this will generate unique id's)
+-then we'll initialize One variable called "initialState" with one array called todo in this array we are having onr basic object having id & text properties.
+- then we are assigning "createSlice" to a vaiable which variable we are gonna exporting. this "createSlice" takes property called name & initialState 3rd property is reducers
