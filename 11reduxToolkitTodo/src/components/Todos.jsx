@@ -10,7 +10,8 @@ function Todos() {
 
   return (
     <>
-      <div>Todos</div>
+    <br/>
+      <div>Todo List</div>
       {/* {todos.map((todo) => {
         <li key={todo.id}>
           {todo.text}
@@ -27,7 +28,7 @@ function Todos() {
             className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
             key={todo.id}
           >
-            
+
             <hr/>
 
             <div className='text-white'>{todo.text}</div>
