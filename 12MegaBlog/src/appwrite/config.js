@@ -115,11 +115,7 @@ export class Service{
         conf.appwriteBucketId,
         fileId
     )
-}
-
-  
-
-
+  }
 
 }
 
