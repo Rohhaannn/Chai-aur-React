@@ -38,9 +38,8 @@ function App() {
       </div>
     
     </div>
-  ) : true
+  ) : null
 }
 
 export default App
 
-//video 19: watched till 19:27
