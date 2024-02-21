@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../store/authSlice'
 import {Input, Button, Logo} from './index'
 import { useDispatch } from 'react-redux'
-import { useForm } from 'react-hook-form'
+import {useForm} from 'react-hook-form'
 
 
 
@@ -14,7 +14,7 @@ function Signup() {
   
   // State for showing error messages.
   const [error, setError] = useState("")
-  const [register, handleSubmit] = useForm()
+  const {register, handleSubmit} = useForm()
 
   const create =  async(data) => {
     setError("")
@@ -82,7 +82,7 @@ function Signup() {
             <Button
               type="submit"
               className="w-full"
-            > Creat Account </Button>
+            > Create Account </Button>
             
           </div>
         </form>
