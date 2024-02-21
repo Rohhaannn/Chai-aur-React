@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { login as authLogin } from '../store/authSlice'
 import { Button, Input, Logo } from './index'
 import { useDispatch } from 'react-redux'
@@ -38,7 +38,7 @@ function Login() {
         </div>
         <h2 className='text-center text-2xl font-bold leading-tight text-white'>Sign in to your account</h2>
         <p className='mt-2 text-center text-base text-white'>
-          Don&apos;t have an account 
+          Don&apos;t have an account?
           <Link 
             to="/signup"
             className='font-medium text-primary transition-all duration-200 hover:underline'
