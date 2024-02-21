@@ -51,7 +51,7 @@ function Login() {
         {error && <p className='text-red-600 mt-8 text-center'> {error} </p> }
 
         <form onSubmit={handleSubmit(login)} className='mt-8 text-left '>
-          <div className='space-x-5 text-white p-3'>
+          <div className='space-y-5 text-white'>
             <Input
               label = "Email"
               placeholder = "Enter your email"
@@ -73,7 +73,7 @@ function Login() {
 
             <Button
               type="submit"
-              className="w-full text-black bg-green-500 mt-4 font-semibold"
+              className="w-full text-black bg-green-500 mt-4 font-semibold hover:text-black"
             > Sign in </Button>
 
             
