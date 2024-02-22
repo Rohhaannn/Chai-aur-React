@@ -42,7 +42,7 @@ function Login() {
           <Link 
             to="/signup"
             className='font-medium text-primary transition-all duration-200 hover:underline'
-          > &nbsp;
+          >&nbsp;
           Sign Up
           </Link>
         </p>
@@ -51,7 +51,7 @@ function Login() {
         {error && <p className='text-red-600 mt-8 text-center'> {error} </p> }
 
         <form onSubmit={handleSubmit(login)} className='mt-8 text-left'>
-          <div className='space-y-3 text-white'>
+          <div className='space-y-4 text-white'>
             <Input
               label = "Email"
               placeholder = "Enter your email"
