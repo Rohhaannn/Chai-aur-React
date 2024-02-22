@@ -32,8 +32,8 @@ function Login() {
       <div className={`mx-auto w-full max-w-lg bg-[#2a3347] rounded-xl p-10 border border-black/10`}>
 
         <div className='mb-2 flex justify-center text-white'>
-          <span className='inline-block w-full max-w[100px]'>
-            <Logo width="100px"/>
+          <span className='inline-block w-full max-w-[100px] ml-12'>
+            <Logo width="100%"/>
           </span>
         </div>
         <h2 className='text-center text-2xl font-bold leading-tight text-white'>Sign in to your account</h2>
