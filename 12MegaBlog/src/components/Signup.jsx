@@ -12,7 +12,7 @@ function Signup() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
   
-  // State for showing error messages.
+  // States for showing error messages.
   const [error, setError] = useState("")
   const {register, handleSubmit} = useForm()
 
@@ -31,15 +31,15 @@ function Signup() {
   }
 
   return (
-    <div className='flex items-center justify-center'>
-      <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
-        <div className='mb-2 flex justify-center'>
+    <div className='flex items-center justify-center m-2 p-2'>
+      <div className={`mx-auto w-full max-w-lg bg-[#2a3347] rounded-xl p-10 border border-black/10`}>
+        <div className='mb-2 flex justify-center text-white'>
           <span className='inline-block w-full max-w-[100px]'>
             <Logo width='100%'/>
           </span>
         </div>
-        <h2 className='text-center text-2xl font-bold leading-tight'>Sign up to create account</h2>
-        <p className='mt-2 text-center text-base text-black/60'>
+        <h2 className='text-center text-2xl font-bold leading-tight text-white'>Sign up to create account</h2>
+        <p className='mt-2 text-center text-base text-white text-black/60'>
           Already have an account? &nbsp;
           <Link 
             to="/login"
@@ -53,15 +53,15 @@ function Signup() {
         {error && <p className='text-red-600 mt-8 text-center'> {error} </p> }
 
         <form onSubmit={handleSubmit(create)}>
-          <div className='space-y-5'>
+          <div className='space-y-5 text-left text-white'>
             <Input
-              label="Full Name: "
+              label="Full Name"
               placeholder = "Enter your full name"
               {...register("name",{required: true})}
             />
 
             <Input
-              label = "Email: "
+              label = "Email"
               placeholder = "Enter your email"
               type = "email"
               {...register("email", {
@@ -73,15 +73,16 @@ function Signup() {
             />
 
             <Input
-              label = "Password: "
+              label = "Password"
               type = "password"
+              maxLength={8}
               placeholder = "Enter your password"
               {...register("password",{required: true})}
             />
 
             <Button
               type="submit"
-              className="w-full text-black bg-green-500 mt-4 font-semibold"
+              className="w-full text-black bg-green-500 mt-4 font-semibold hover:text-black"
             > Create Account </Button>
             
           </div>

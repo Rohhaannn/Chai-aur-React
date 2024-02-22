@@ -50,7 +50,7 @@ function Login() {
         {/* we are going to display error here */}
         {error && <p className='text-red-600 mt-8 text-center'> {error} </p> }
 
-        <form onSubmit={handleSubmit(login)} className='mt-8 text-left '>
+        <form onSubmit={handleSubmit(login)} className='mt-8 text-left'>
           <div className='space-y-3 text-white'>
             <Input
               label = "Email"
@@ -67,6 +67,7 @@ function Login() {
             <Input
               label = "Password"
               type = "password"
+              maxLength={8}
               placeholder = "Enter your password"
               {...register("password",{required: true})}
             />
