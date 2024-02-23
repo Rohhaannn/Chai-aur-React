@@ -44,7 +44,7 @@ function Login() {
             to="/signup"
             className='font-medium text-primary transition-all duration-200 hover:underline'
           >&nbsp;
-          Sign Up
+            Sign Up
           </Link>
         </p>
 
