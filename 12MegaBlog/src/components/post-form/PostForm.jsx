@@ -44,7 +44,7 @@ function PostForm() {
   }
 
   const slugTransform = useCallback((value)=>{
-    if (value && typeof value === "sting") {
+    if (value && typeof value === "string") {
       return value
       .trim()
       .toLowerCase()
