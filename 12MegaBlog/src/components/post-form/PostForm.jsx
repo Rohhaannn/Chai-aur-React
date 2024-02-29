@@ -92,7 +92,7 @@ export default function PostForm({ post }) {
             </div>
             <div className="w-1/3 px-2">
                 <Input
-                    label="Featured Image :"
+                    label="Featured Image"
                     type="file"
                     className="mb-4"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
@@ -108,12 +108,12 @@ export default function PostForm({ post }) {
                     </div>
                 )}
                 <Select
-                    options={["active", "inactive"]}
                     label="Status"
+                    options={["active", "inactive"]}
                     className="mb-4 text-black"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full text-black bg-green-500 mt-4 font-semibold hover:text-black">
+                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>

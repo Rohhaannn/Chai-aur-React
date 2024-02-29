@@ -1,4 +1,4 @@
-import React,{ useEffect, uesState } from 'react'
+import React,{ useEffect, useState } from 'react'
 import { Container, PostForm } from '../components'
 import appwriteService from '../appwrite/config'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -22,7 +22,7 @@ function EditPost() {
   },[slug, navigate])
 
   return post ? (
-    <div className='py-8'>
+    <div className='py-8 text-white'>
         <Container>
             <PostForm post={post} />
         </Container>
